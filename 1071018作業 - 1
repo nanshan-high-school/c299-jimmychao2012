@@ -2,30 +2,30 @@
 #include <iostream>
 using namespace std;
 int main() {
-  int x;
-  cout << "你要幾個數字";
-  cin >> x;
+    int x;
+    cout << "你要幾個數字";
+    cin >> x;
 
-  int y[x];
-  cout << "請輸入數字";
-  for(int i = 0; i < x; i++)
-    cin >> y[i];
-  int j;
-  for(int l = 0; l < x; l++){
-    for(int i = 0; i < x; i++){
-      if(y[i] > y[i + 1]){
-        j = y[i];
-        y[i] = y[i];
-        y[i + 1] = j;
-      }  
+    int y[x];
+    cout << "請輸入數字";
+    for(int i = 0; i < x; i++)
+        cin >> y[i];
+    int j;
+    for(int l = 0; l < x; l++){
+        for(int i = 0; i < x; i++){
+            if(y[i] > y[i + 1]){
+                j = y[i];
+                y[i] = y[i];
+                y[i + 1] = j;
+             }  
+        }
     }
-  }
-  cout << y[0] << " " << y[x];
-  for(int b = 1; b < x; b++){
-    if(y[b] != y[b - 1] + 1){
-      cout << "no";
-      break;
+    cout << y[0] << " " << y[x];
+    for(int b = 1; b < x; b++){
+        if(y[b] != y[b - 1] + 1){
+            cout << "no";
+            break;
+        }
     }
-  }
   
 }
